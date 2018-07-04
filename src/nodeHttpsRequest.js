@@ -59,15 +59,15 @@ const createModule = () => {
                 request.end();
             });
 
-            return await promise;
+            return promise;
         };
 
-        const _options = async (params) => await sendRequest({ ...params, method: "OPTIONS" });
-        const _head = async (params) => await sendRequest({ ...params, method: "HEAD" });
-        const _get = async (params) => await sendRequest({ ...params, method: "GET" });
-        const _post = async (params) => await sendRequest({ ...params, method: "POST" });
-        const _put = async (params) => await sendRequest({ ...params, method: "PUT" });
-        const _delete = async (params) => await sendRequest({ ...params, method: "DELETE" });
+        const _options = async (params) => sendRequest({ ...params, method: "OPTIONS" });
+        const _head = async (params) => sendRequest({ ...params, method: "HEAD" });
+        const _get = async (params) => sendRequest({ ...params, method: "GET" });
+        const _post = async (params) => sendRequest({ ...params, method: "POST" });
+        const _put = async (params) => sendRequest({ ...params, method: "PUT" });
+        const _delete = async (params) => sendRequest({ ...params, method: "DELETE" });
 
         return {
             _options,
